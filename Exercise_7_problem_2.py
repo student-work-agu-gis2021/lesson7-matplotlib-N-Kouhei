@@ -17,7 +17,6 @@
 # - Parse dates from the column `'DATE'` and set the dates as index in the dataframe 
 
 # YOUR CODE HERE 1 to read the data into data and parse dates
-import numpy as np
 import pandas as pd
 fp = "data/helsinki-vantaa.csv"
 data = pd.read_csv(fp,parse_dates=['DATE'],index_col='DATE')
@@ -67,7 +66,7 @@ plt.ylabel('Temperature (Celsius)')
 plt.grid()
 plt.show()
 # Set output file name
-outputfp = ""
+outputfp = "temp_line_plot.png"
 
 # Save plot as image
 # YOUR CODE HERE 4
