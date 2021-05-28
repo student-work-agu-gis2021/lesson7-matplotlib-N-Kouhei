@@ -36,7 +36,9 @@ print(len(data))
 
 # YOUR CODE HERE 2
 selection = data.loc[(data.index >= '19880101') & (data.index<='20181201')]
-
+selection = selection.sort_index();
+print(selection.head())
+print(selection.tail())
 
 # Check that the data was read in correctly:
 selection.head()
@@ -57,7 +59,13 @@ print("Number of rows:", len(selection))
 # 
 
 # YOUR CODE HERE 3
-
+import matplotlib.pyplot as plt
+plt.plot(selection.index,selection['TEMP_C'],linestyle='solid',c='black',marker='o',markersize=2)
+plt.title('Helsinki-Vantaa Airport')
+plt.xlabel('Time')
+plt.ylabel('Temperature (Celsius)')
+plt.grid()
+plt.show()
 # Set output file name
 outputfp = ""
 
